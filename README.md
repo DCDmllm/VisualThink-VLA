@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo2.png" width="72%" alt="VisualThink-VLA logo"><img src="assets/visualthink_vla_logo.png" width="72%" alt="VisualThink-VLA logo">
+  <img src="assets/logo2.png" width="12%" alt="VisualThink-VLA logo"><img src="assets/visualthink_vla_logo.png" width="72%" alt="VisualThink-VLA logo">
 </div>
 
 <p align="center">
