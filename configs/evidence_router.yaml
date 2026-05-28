@@ -1,0 +1,136 @@
+channel_order: [bbox, edge, motion, relation]
+budget_values: [1, 2, 3, 4]
+
+channels:
+  bbox:
+    cost: 1.0
+  edge:
+    cost: 0.2
+  motion:
+    cost: 0.25
+  relation:
+    cost: 0.08
+
+stage_keep_priors:
+  approach:
+    bbox: 0.65
+    edge: 0.70
+    motion: 0.15
+    relation: 0.55
+  grasp:
+    bbox: 0.30
+    edge: 0.65
+    motion: 0.50
+    relation: 0.75
+  place:
+    bbox: 0.50
+    edge: 0.65
+    motion: 0.15
+    relation: 0.50
+
+stage_budget_priors:
+  approach: [0.10, 0.40, 0.35, 0.15]
+  grasp: [0.08, 0.25, 0.42, 0.25]
+  place: [0.10, 0.40, 0.35, 0.15]
+
+loss_weights:
+  action: 1.0
+  distill: 0.7
+  cost: 0.002
+  prior: 0.01
+  budget: 0.03
+  coverage: 0.02
+  utility: 1.00
+  utility_budget: 0.40
+  entropy: 0.01
+
+gating:
+  temperature_start: 2.0
+  temperature_end: 0.9
+  threshold: 0.5
+  fallback_entropy_thresh: 0.85
+  fallback_min_missing_channels: 3
+  fallback_disturbed_only: true
+
+coverage:
+  approach:
+    bbox: 0.10
+    edge: 0.20
+    motion: 0.05
+    relation: 0.10
+  grasp:
+    bbox: 0.05
+    edge: 0.15
+    motion: 0.10
+    relation: 0.15
+  place:
+    bbox: 0.08
+    edge: 0.18
+    motion: 0.05
+    relation: 0.10
+
+utility:
+  batch_size: 64
+  relative_keep_thresh: 0.25
+  absolute_score_thresh: 0.0001
+  hard_relation_thresh_raw: 1.0e-5
+  hard_relation_weight: 5.0
+
+ranking:
+  weight: 0.20
+  margin: 0.05
+  min_diff: 1.0e-4
+
+model:
+  image_size: 64
+  bow_dim: 256
+  query_bow_dim: 64
+  ctx_dim: 128
+  channel_dim: 64
+  teacher_hidden: 512
+  student_hidden: 256
+  text_encoder:
+    type: sequence
+    tokenizer_path: openvla/openvla-7b
+    instruction_max_len: 24
+    query_max_len: 12
+    embed_dim: 96
+    hidden_dim: 128
+
+training:
+  teacher_epochs: 4
+  gate_warmup_epochs: 1
+  joint_epochs: 6
+  batch_size: 32
+  val_ratio: 0.1
+  stage_dropout_prob: 0.50
+  cost_budget_anneal_fraction: 0.75
+  lr_teacher: 2.0e-4
+  lr_student: 2.0e-4
+  lr_gate: 1.0e-4
+  weight_decay: 1.0e-4
+
+teacher_dropout:
+  prob: 0.7
+  min_drop: 1
+  max_drop: 2
+  channel_weights:
+    bbox: 1.0
+    edge: 2.5
+    motion: 1.0
+    relation: 1.5
+
+usage_band:
+  weight: 0.08
+  low: 0.12
+  high: 0.88
+  anneal_fraction: 0.55
+
+student_dropout:
+  prob: 0.15
+  min_keep: 1
+
+student_exploration:
+  epsilon: 0.15
+  min_keep: 1
+  max_keep: 3

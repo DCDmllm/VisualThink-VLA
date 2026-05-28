@@ -1,0 +1,10 @@
+numpy
+pillow
+opencv-python
+pyyaml
+tqdm
+matplotlib
+torch
+transformers
+requests
+qwen-vl-utils

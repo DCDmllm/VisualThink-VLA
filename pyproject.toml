@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visualthink-vla"
+version = "0.1.0"
+description = "Routed visual evidence for vision-language-action policies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "VisualThink-VLA Authors"}]
+
+[tool.setuptools.packages.find]
+include = ["visualthink_vla*"]
