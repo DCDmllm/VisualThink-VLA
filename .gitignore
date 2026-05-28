@@ -9,10 +9,10 @@ outputs/
 runs/
 logs/
 artifacts/
-data/
-datasets/
-checkpoints/
-models/
+/data/
+/datasets/
+/checkpoints/
+/models/
 *.pt
 *.pth
 *.bin
