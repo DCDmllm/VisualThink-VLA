@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="assets/visualthink_vla_logo.png" width="72%" alt="VisualThink-VLA logo">
+  <img src="assets/logo2.png" width="72%" alt="VisualThink-VLA logo"><img src="assets/visualthink_vla_logo.png" width="72%" alt="VisualThink-VLA logo">
 </div>
 
-<p>
+<p align="center">
   <b>Visual Intermediate
 Reasoning for Effective and Low-Latency
 Vision-Language-Action Policies</b>
