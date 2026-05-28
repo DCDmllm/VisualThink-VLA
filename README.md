@@ -2,10 +2,10 @@
   <img src="assets/visualthink_vla_logo.png" width="72%" alt="VisualThink-VLA logo">
 </div>
 
-<h1 align="center">VisualThink-VLA</h1>
-
-<p align="center">
-  <b>Routed Visual Evidence for Vision-Language-Action Policies</b>
+<p>
+  <b>Visual Intermediate
+Reasoning for Effective and Low-Latency
+Vision-Language-Action Policies</b>
 </p>
 
 <p align="center">
