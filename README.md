@@ -214,11 +214,14 @@ The `.gitignore` is configured to keep these files out of the repository by defa
 If you find this repository useful, please cite:
 
 ```bibtex
-@article{visualthinkvla2026,
-  title   = {VisualThink-VLA: Routed Visual Evidence for Vision-Language-Action Policies},
-  author  = {VisualThink-VLA Authors},
-  journal = {arXiv preprint},
-  year    = {2026}
+@misc{gao2026visualthinkvlavisualintermediatereasoning,
+      title={VisualThink-VLA: Visual Intermediate Reasoning for Effective and Low-Latency Vision-Language-Action Policies}, 
+      author={Mingjian Gao and Wenqiao Zhang and Yuqian Yuan and Yang Dai and Binhe Yu and Zheqi Lv and Haoyu Zheng and Jiaqi Zhu and Zhiqi Ge and Zixuan Wan and Siliang Tang and Yueting Zhuang},
+      year={2026},
+      eprint={2605.30011},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.30011}, 
 }
 ```
 
